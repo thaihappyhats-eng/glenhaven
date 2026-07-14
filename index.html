@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>West Alder — Two Premium Building Lots, Glenhaven, Whatcom County, WA</title>
-<meta name="description" content="Two premium residential building lots at Glenhaven's highest elevation, Whatcom County, WA — protected forest behind, walking distance to Cain Lake, minutes from Lake Whatcom, Bellingham, Fairhaven, and Mount Baker.">
+<meta name="description" content="Two premium residential building lots at what's widely regarded as Glenhaven's highest elevation, Whatcom County, WA — protected forest behind, walking distance to Cain Lake, minutes from Lake Whatcom, Bellingham, Fairhaven, and Mount Baker.">
 <meta name="theme-color" content="#0f1c15">
 <meta property="og:type" content="website">
 <meta property="og:title" content="West Alder — Two Premium Building Lots, Glenhaven, WA">
-<meta property="og:description" content="Lots 15 &amp; 16 — 26,148 sq ft combined, the highest homesite in Glenhaven, protected forest behind. Offered together.">
+<meta property="og:description" content="Lots 15 &amp; 16 — 26,148 sq ft combined, widely regarded as the highest homesite in Glenhaven, protected forest behind. Offered together.">
 <meta property="og:image" content="assets/property-aerial.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
   --sans:'Inter', -apple-system, sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 @media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto} .reveal{transition:none} }
 body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
 img,video{display:block;width:100%;height:100%;object-fit:cover}
@@ -51,7 +51,7 @@ header nav{display:flex;gap:24px;align-items:center}
 header nav a{font-size:13.5px;font-weight:500;text-decoration:none;color:rgba(255,255,255,.85)}
 header.solid nav a{color:var(--gray)}
 header nav a:hover{color:var(--brass-l)}
-header nav a.cta{background:var(--brass);color:#fff!important;padding:9px 20px;border-radius:4px}
+header nav a.cta{background:var(--brass);color:#fff!important;padding:12px 20px;border-radius:4px}
 header nav a.cta:hover{background:#b9945c}
 @media(max-width:760px){header nav a:not(.cta){display:none}}
 
@@ -69,6 +69,9 @@ header nav a.cta:hover{background:#b9945c}
   border:1px solid rgba(255,255,255,.35);border-radius:100px;padding:8px 16px;backdrop-filter:blur(4px)}
 #hero .actions{margin-top:2.4rem;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 #hero .filmnote{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+#hero .hero-tertiary{display:inline-block;margin-top:1.3rem;font-size:12.5px;color:rgba(255,255,255,.85);
+  text-decoration:underline;text-underline-offset:3px}
+#hero .hero-tertiary:hover{color:#fff}
 .btn{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
   text-decoration:none;padding:15px 32px;border-radius:4px;transition:all .3s}
 .btn.solid{background:var(--brass);color:#fff}
@@ -115,6 +118,7 @@ header nav a.cta:hover{background:#b9945c}
 .snap-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
   border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:3rem}
 @media(max-width:860px){.snap-stats{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.snap-stats{grid-template-columns:1fr}}
 .snap-stats .stat{background:var(--paper);padding:26px 20px;text-align:center}
 .snap-stats .stat b{display:block;font-family:var(--serif);font-size:1.9rem;font-weight:600;color:var(--pine)}
 .snap-stats .stat span{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--gray);margin-top:6px;display:block}
@@ -163,7 +167,7 @@ header nav a.cta:hover{background:#b9945c}
 .divider .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,16,12,.25),rgba(10,16,12,.45))}
 .divider .cap{position:absolute;left:5vw;bottom:5vh;color:#fff;z-index:2}
 .divider .cap .big{font-family:var(--serif);font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:300;text-shadow:0 2px 24px rgba(0,0,0,.5)}
-.divider .cap .small{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:.4rem}
+.divider .cap .small{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:.4rem;text-shadow:0 1px 12px rgba(0,0,0,.55)}
 
 /* community & amenities */
 #community{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -313,7 +317,7 @@ table.drives td:last-child{text-align:right;color:var(--gray);white-space:nowrap
 #contact .email{margin-top:1.1rem;font-size:14px;color:#d5cfc0}
 footer{background:var(--pine);border-top:1px solid rgba(255,255,255,.1);padding:26px 0 90px;color:#7e8a7d;font-size:12.5px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
-@media(max-width:760px){footer{padding-bottom:100px}}
+@media(max-width:760px){footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}}
 
 /* mobile sticky CTA */
 .mcta{position:fixed;left:0;right:0;bottom:0;z-index:95;background:var(--pine);
@@ -323,7 +327,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
   transform:translateY(100%);transition:transform .3s ease}
 .mcta.show{transform:translateY(0)}
 .mcta .m-txt{font-size:11.5px;color:#cfd6cb;line-height:1.3;max-width:60%}
-.mcta a.btn{padding:11px 18px;font-size:11.5px;white-space:nowrap}
+.mcta a.btn{padding:13px 18px;font-size:11.5px;white-space:nowrap}
 @media(max-width:760px){.mcta{display:flex}}
 </style>
 </head>
@@ -350,7 +354,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
   <div class="shade"></div>
   <div class="inner">
     <div class="eyebrow" style="color:var(--brass-l)">Glenhaven · Whatcom County, Washington</div>
-    <h1>The Highest Ground in Glenhaven</h1>
+    <h1>Among the Highest Ground in Glenhaven</h1>
     <div class="tagline">Two Premium Residential Building Lots — Offered Together</div>
     <p class="sub">From West Alder Drive, the ridge keeps climbing until there's simply no more hill left to give —
     and that's where Lots 15 &amp; 16 sit, protected forest at their back, Cain Lake close enough to walk to.
@@ -369,6 +373,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       <a class="btn ghost" href="#atlas">Explore the Area</a>
       <span class="filmnote">Filmed above the property · owner drone footage</span>
     </div>
+    <a class="hero-tertiary" href="mailto:Jimmy@roughandreadyllc.com?subject=West%20Alder%20Lots%2015%20%26%2016%20—%20Information%20Package%20Request">Already sure? Request the info package →</a>
   </div>
 </section>
 
@@ -383,7 +388,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
     </div>
     <div class="pillars-grid reveal">
       <a class="pillar-tile" href="#property">
-        <img src="assets/lot-b.jpg" loading="lazy" decoding="async" width="1000" height="750" alt="Dense natural forest edge on Lot 15">
+        <img src="assets/lot-prepared.jpg" loading="lazy" decoding="async" width="1000" height="473" alt="Dense natural forest understory on the property at dusk">
         <div class="shade"></div>
         <div class="txt">
           <div class="num">01 · Privacy</div>
@@ -399,8 +404,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <div class="txt">
           <div class="num">02 · Elevated Setting</div>
           <h3>Glenhaven's Highest Homesite</h3>
-          <p>Lots 15 &amp; 16 sit at what's widely regarded as the highest ground in the community, above
-          the rooflines below.</p>
+          <p>Lots 15 &amp; 16 sit at what's widely regarded as the highest ground in the community.</p>
           <span class="go">See the property ↓</span>
         </div>
       </a>
@@ -421,7 +425,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <div class="txt">
           <div class="num">04 · Community Amenities</div>
           <h3>A Real Neighborhood</h3>
-          <p>Glenhaven's own clubhouse and maintained roads, plus a community dock on Cain Lake, within
+          <p>Glenhaven's own clubhouse and maintained roads, plus Cain Lake within
           walking distance.</p>
           <span class="go">See the community ↓</span>
         </div>
@@ -516,8 +520,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       <div class="card" data-cat="lakes">
         <div class="imgbox"><img src="assets/cain-lake.jpg" loading="lazy" decoding="async" alt="Dock on Cain Lake at sunset"></div>
         <div class="body"><div class="top"><h3>Cain Lake</h3><span class="dist">Walking distance</span></div>
-        <p>Glenhaven's own lake — swimming, kayaks, trout, and the community dock. The valley the property
-        overlooks runs down toward its shore.</p></div>
+        <p>Glenhaven's own nearby lake. The valley near the property
+        runs down toward its shore.</p></div>
       </div>
 
       <div class="card" data-cat="lakes">
@@ -538,7 +542,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <div class="imgbox"><img src="assets/sudden-valley.jpg" loading="lazy" decoding="async" alt="Lakefront homes and docks at Sudden Valley on Lake Whatcom"></div>
         <div class="body"><div class="top"><h3>Sudden Valley</h3><span class="dist">≈ 15 min</span></div>
         <p>The master-planned community on Lake Whatcom — golf course, marina, beaches — where homes
-        regularly sell from $700K into the millions. Proof this corner of the county carries serious value.</p></div>
+        trade well into seven figures. Proof this corner of the county carries serious value.</p></div>
       </div>
 
       <div class="card" data-cat="mtn">
@@ -626,15 +630,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       <div class="pos reveal">
         <div class="eyebrow">01</div>
         <h3>Near the wealth</h3>
-        <p>Sudden Valley's golf-and-marina community is 15 minutes away, with homes from $700K into the
-        millions. Established high-value residential life already exists in this exact corner of the county —
-        this ridge sits beside it at land prices.</p>
+        <p>Sudden Valley's golf-and-marina community is 15 minutes away, with homes trading well into seven
+        figures. Established high-value residential life already exists in this exact corner of the county,
+        and this ridge sits right beside it.</p>
       </div>
       <div class="pos reveal">
         <div class="eyebrow">02</div>
         <h3>Near the wild</h3>
         <p>Protected forest at the property line. Galbraith's trail network at 20 minutes. The Chuckanuts
-        and the saltwater at 25. A record-snowfall volcano on the horizon. None of it can be built over.</p>
+        and the saltwater at 25. A record-snowfall volcano on the horizon.</p>
       </div>
       <div class="pos reveal">
         <div class="eyebrow">03</div>
@@ -671,18 +675,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <div class="capn">Glenhaven's own clubhouse — photographed on-site, not a rendering.</div>
       </div>
       <div class="community-text">
-        <h3>The clubhouse, the roads, the dock — already built.</h3>
+        <h3>The clubhouse and the roads — already built.</h3>
         <p>Glenhaven has its own clubhouse and maintained roads in place, real infrastructure around a
-        homesite that still feels like the edge of the wild. A community dock sits on Cain Lake, within
+        homesite that still feels like the edge of the wild. Cain Lake is within
         walking distance of the property.</p>
-        <p>The Alder Trail begins immediately behind the lots, leading into the forest that borders the
-        property — a five-minute walk from your own driveway to a trailhead most homesites would need a
-        car to reach.</p>
+        <p>Unmarked trails are reported in the protected forest bordering the lots, on foot from your own
+        driveway — no car required, unlike most homesites nearby.</p>
       </div>
     </div>
     <div class="community-strip reveal">
-      <img src="assets/alder-trail.jpg" loading="lazy" decoding="async" width="1080" height="700" alt="Trailhead sign on the Alder Trail in mature forest">
-      <div class="capn">The Alder Trail, on foot from the lots — owner photo.</div>
+      <img src="assets/alder-trail.jpg" loading="lazy" decoding="async" width="1080" height="700" alt="Forest trail signage in the Whatcom County backcountry">
+      <div class="capn">Regional trail character, Whatcom County — for illustration.</div>
     </div>
   </div>
 </section>
@@ -703,7 +706,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
     <div class="reveal">
       <div class="eyebrow">The Property</div>
       <h2 class="sec-title">Lots 15 &amp; 16 — two titles, one ridge.</h2>
-      <p class="sec-intro">The annotated survey below marks the exact boundary of both lots — where the
+      <p class="sec-intro">The annotated survey below marks the approximate boundary of both lots — where the
       line runs, how the two parcels divide, and what borders them on every side.</p>
     </div>
 
@@ -744,7 +747,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
           <div class="eyebrow">Lot 15</div>
           <h3>Mature cedars, left natural</h3>
           <p>Standing western red cedars, moss, ferns, and the privacy only established timber provides —
-          walked here on video by the owner. Keep it wild as your own greenbelt, or build within the trees.</p>
+          walked here on video by the owner. Keep it wild as your own privacy buffer, or build within the trees.</p>
         </div>
       </div>
     </div>
@@ -786,15 +789,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       </div>
       <div class="why-card">
         <h4>Forest on One Side, Not a Fence Line</h4>
-        <p>Most platted lots back up to another lot or a road. These back directly onto forest that is
-        not part of any building lot — a rear boundary that stays a tree line instead of eventually
+        <p>Most platted lots back up to another lot or a road. These back directly onto forest —
+        a rear boundary that stays a tree line instead of eventually
         becoming a neighbor's siding.</p>
       </div>
       <div class="why-card">
         <h4>Two Lots, Two Kinds of Ready</h4>
         <p>A typical single-lot purchase here is one condition: cleared or wooded, and nothing else. This
         purchase is both — Lot 16 already cleared and carrying an existing septic design, Lot 15 left
-        natural with mature standing cedars. Build now, keep a private greenbelt next door, or both.</p>
+        natural with mature standing cedars. Build now, keep a private wooded buffer next door, or both.</p>
       </div>
       <div class="why-card">
         <h4>A Lodge and Maintained Roads, Without the Isolation</h4>
@@ -823,7 +826,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <tr><td class="dim">Elevation</td><td data-label="Typical Glenhaven Lot">Varies by position on the hillside</td>
           <td class="win" data-label="Lots 15 &amp; 16">Widely regarded as the highest homesite in the community</td></tr>
         <tr><td class="dim">Rear boundary</td><td data-label="Typical Glenhaven Lot">Often another lot or the road</td>
-          <td class="win" data-label="Lots 15 &amp; 16">Protected forest that is not part of any building lot</td></tr>
+          <td class="win" data-label="Lots 15 &amp; 16">Protected forest — not another lot or the road</td></tr>
         <tr><td class="dim">Ground condition</td><td data-label="Typical Glenhaven Lot">Usually one condition — cleared, or wooded</td>
           <td class="win" data-label="Lots 15 &amp; 16">Both: Lot 16 already cleared and prepared; Lot 15 left natural with mature cedars</td></tr>
         <tr><td class="dim">Utilities</td><td data-label="Typical Glenhaven Lot">Buyer typically arranges independently</td>
@@ -839,8 +842,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       </table>
     </div>
     <p class="compare-note">A fact-only comparison. No two lots in Glenhaven are identical, so treat
-    "typical single lot" as a reasonable baseline rather than any one specific listing. Buyer to verify
-    all figures independently.</p>
+    "typical single lot" as a reasonable baseline rather than any one specific listing.</p>
   </div>
 </section>
 
@@ -874,7 +876,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
     <div class="snap-stats reveal">
       <div class="stat"><b>2</b><span>Legal Residential Lots</span></div>
       <div class="stat"><b>26,148 SF</b><span>Combined (13,068 + 13,080)</span></div>
-      <div class="stat"><b>No. 1</b><span>Highest Homesite in Glenhaven</span></div>
+      <div class="stat"><b>Highest</b><span>Widely Regarded Top Homesite in Glenhaven</span></div>
       <div class="stat"><b>6 min</b><span>To the Lake Whatcom Boat Launch</span></div>
     </div>
 
@@ -885,7 +887,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <ul>
           <li>Two legal residential building lots — Lots 15 &amp; 16</li>
           <li>Approximately 26,148 sq ft combined</li>
-          <li>Highest homesite in the Glenhaven community</li>
+          <li>Widely regarded as the highest homesite in the community</li>
           <li>Offered together, as a single purchase</li>
         </ul>
       </div>
@@ -904,7 +906,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <h4>What surrounds it</h4>
         <ul>
           <li>Protected forest directly behind the property</li>
-          <li>Alder Trail begins immediately behind the lots</li>
+          <li>Unmarked trails reported in the forest directly behind the lots</li>
           <li>Walking distance to Cain Lake</li>
           <li>≈ 6 minutes to the Lake Whatcom boat launch</li>
         </ul>
@@ -943,7 +945,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <div class="conf-card">
           <div class="q">Where are the boundaries?</div>
           <div class="a">See the annotated survey and companion aerial in the Property section above — the
-          exact outline and dividing line between Lot 15 and Lot 16 are marked directly on the photo.</div>
+          approximate outline and dividing line between Lot 15 and Lot 16 are marked directly on the photo.</div>
         </div>
         <div class="conf-card">
           <div class="q">How much privacy is there?</div>
@@ -953,7 +955,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
         <div class="conf-card">
           <div class="q">What community amenities exist?</div>
           <div class="a">See the Community &amp; Amenities section above — Glenhaven's own clubhouse and
-          maintained roads, plus lake access at Cain Lake and the Alder Trail into the forest behind the lots.</div>
+          maintained roads, plus lake access at Cain Lake and trail access into the protected forest behind the lots.</div>
         </div>
         <div class="conf-card">
           <div class="q">What's the asking price?</div>
@@ -975,7 +977,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
     </div>
 
     <p class="bigline reveal">The two scarcest words in land are <em>above</em> and <em>behind</em>.
-    Here, both are already spoken for — by elevation and by law.</p>
+    Here, both are already spoken for — by elevation and by the forest that borders it.</p>
   </div>
 </section>
 
@@ -1048,7 +1050,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       </div>
       <div class="reveal">
         <table class="drives">
-          <tr><td>Alder Trail / protected forest</td><td>property line</td></tr>
+          <tr><td>Protected forest</td><td>property line</td></tr>
           <tr><td>Cain Lake</td><td>walking distance</td></tr>
           <tr><td>Lake Whatcom boat launch</td><td>≈ 6 min</td></tr>
           <tr><td>I-5 (Alger exit)</td><td>≈ 8 min</td></tr>
@@ -1063,7 +1065,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
           <tr><td>Mt. Baker Ski Area</td><td>≈ 90 min</td></tr>
           <tr><td>Seattle · Vancouver, BC</td><td>≈ 90 min</td></tr>
         </table>
-        <p class="foot-note">Times approximate, normal traffic. Buyer to verify all information independently.</p>
+        <p class="foot-note">Times approximate, normal traffic.</p>
       </div>
     </div>
   </div>
@@ -1084,7 +1086,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 <footer>
   <div class="wrap">
     <span>West Alder Drive · Glenhaven · Whatcom County, Washington</span>
-    <span>Property footage © owner · Regional photos assembled for preview — confirm licensing before public launch</span>
+    <span>Property footage © owner. Area and lifestyle photography is representative of the destinations described.</span>
   </div>
 </footer>
 
